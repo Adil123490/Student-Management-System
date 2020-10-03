@@ -101,6 +101,7 @@ class Student:
 
         txt_search=Entry(Detail_Frame,textvariable=self.search_txt,width=15,font=("times new roman", 15, "bold"),bd=5,relief=GROOVE)
         txt_search.grid(row=0,column=2,pady=10,padx=20,sticky="w")
+        txt_search.bind('<Return>',self.search_data)
 
         searchbtn=Button(Detail_Frame,text="Search",command=self.search_data,width=10,pady=5).grid(row=0,column=3,padx=10,pady=10)
         showallbtn=Button(Detail_Frame,text="Show All",command=self.fetch_data,width=10,pady=5).grid(row=0, column=4,padx=10,pady=10)
